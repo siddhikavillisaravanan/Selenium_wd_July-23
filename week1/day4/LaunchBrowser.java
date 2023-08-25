@@ -1,11 +1,15 @@
 package week1.day4;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+
 public class LaunchBrowser {
-public static void main(String[] args) {
+
+	public static void main(String[] args) {
 		
 		//step:1 instantiate the browser driver
-		ChromeDriver driver=new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\villi\\OneDrive\\Desktop\\SeleniumJava\\src\\test\\resources\\Driver\\chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver() ;
+		//ChromeDriver driver=new ChromeDriver();
 		//Step:2 load the url into the chrome browser
 		driver.get("http://leaftaps.com/opentaps/control/login");
 		driver.manage().window().maximize();		
